@@ -73,13 +73,17 @@ var WSAvcPlayer = new Class({
     var framesList = [];
 
     this.ws.onmessage = (evt) => {
-      if(typeof evt.data == "string")
+      if(typeof evt.data == "string") {
+        // console.log("1. pedro onmessage ", evt.data);
         return this.cmd(JSON.parse(evt.data));
+      }
 
+      // console.log("2. pedro onmessage evt.data:", evt.data);
+      // console.log("2. pedro onmessage evt.data.byteLength =", evt.data.byteLength);
       this.pktnum++;
       var frame = new Uint8Array(evt.data);
-      //log("[Pkt " + this.pktnum + " (" + evt.data.byteLength + " bytes)]");
-      //this.decode(frame);
+      // log("[Pkt " + this.pktnum + " (" + evt.data.byteLength + " bytes)]");
+      // this.decode(frame);
       framesList.push(frame);
     };
 
