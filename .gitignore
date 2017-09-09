@@ -2,3 +2,5 @@ node_modules
 public/_main.js
 
 .idea/
+
+vendor/dist/http-live-player.js
