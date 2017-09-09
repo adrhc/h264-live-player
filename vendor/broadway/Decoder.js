@@ -55,10 +55,12 @@
     
     window._broadwayOnHeadersDecoded = _broadwayOnHeadersDecoded;
     window._broadwayOnPictureDecoded = _broadwayOnPictureDecoded;
-    
+
+    // pedro
     var Module = {
       'print': function(text) { console.log('stdout: ' + text); },
-      'printErr': function(text) { console.log('stderr: ' + text); }
+      'printErr': function(text) { console.log('stderr: ' + text); },
+      'TOTAL_MEMORY': 67108864
     };
     
     
