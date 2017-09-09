@@ -23,6 +23,7 @@ const server  = http.createServer(app);
 const silence = new WebStreamerServer(server, {
   width : 640,
   height: 480,
+	fps : 24
 });
 
-server.listen(8080);
+server.listen(8083);
